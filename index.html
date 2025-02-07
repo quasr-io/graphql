@@ -30,8 +30,8 @@
     <div id="voyager">Loading...</div>
     <script type="module">
       const { voyagerIntrospectionQuery: query } = GraphQLVoyager;
-      const response = await fetch('response.json');
-      const introspection = await response.json();
+      const schema = await fetch('schema.json');
+      const introspection = await schema.json();
 
       // Render <Voyager /> into the body.
       GraphQLVoyager.renderVoyager(document.getElementById('voyager'), {
